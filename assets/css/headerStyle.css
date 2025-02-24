@@ -1,0 +1,518 @@
+.wrapper {
+    max-width: 1440px;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#home {
+    width: 100%;
+    height: 85vh;
+    background: url("../img/fit-duo-banner.png") top right no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Zet home-content en black-container netjes onder elkaar */
+    justify-content: flex-end; /* Zorgt ervoor dat black-container altijd onderaan staat */
+}
+.black-container {
+    width: 100%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.home-inner {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.home-content {
+    text-align: left;
+    max-width: 100%;
+    color: white;
+    margin: 0;
+    width: 100%;
+}
+
+#home h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 66px;
+    color: #ffffff;
+}
+
+#home h1 span {
+    display: block;
+    font-size: 74px;
+    font-weight: bold;
+}
+
+#home p {
+    color: #fff;
+    margin: 15px 0 0 10px;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+}
+
+#home_span {
+    color: var(--main-color--);
+}
+
+#popupContainer {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+.popup {
+    margin-top: 200px;
+    width: 350px;
+    z-index: 99;
+    position: fixed;
+    top: 35%;
+    right: -450px;
+    transform: translateY(0);
+    transition: right 1.5s ease-out, opacity 1s ease-in;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.animate-popup {
+    right:230px;
+    opacity: 1;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar .nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+    color: var(--hover-color--);
+}
+
+.navbar .nav-link.active {
+    color: var(--main-color--);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    color: var(--main-color--);
+}
+
+.sub_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#header {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    padding: 15px;
+    border-right: none;
+}
+
+.sub_header .title {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    color: var(--main-color--) !important;
+    margin: 0 0 0 75px !important;
+    padding: 0 !important; 
+}
+
+.sub_header .info {
+    font-size: 12px !important;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 75px 0 0 !important;
+    padding: 0 !important; 
+}
+
+.sub_header .info i {
+    font-size: 16px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+.sub_header .info .email-icon {
+    margin-right: 8px;
+}
+
+.info span {
+    margin-left: 5px;
+}
+
+.mobile-icons {
+    display: none;
+}
+
+.nav-menu {
+    padding: 0;
+    display: block;
+    text-align: left;
+    font-weight: 300;
+    font-size: 20px; 
+}
+
+.nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu > ul {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+.nav-menu a, .nav-menu a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    color: #fff !important;
+    font-size: 15px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    height: 56px;
+    width: 56px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    padding: 0 10px;
+    transition: width 0.5s ease-in-out, background 0.3s ease-in-out;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+    font-size: 22px;
+    color: #fff !important;
+    transition: none;
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-menu a span {
+    opacity: 0;
+    color: #fff !important;
+    position: absolute;
+    left: 55px;
+}
+
+.nav-menu a:hover, .nav-menu li:hover > a {
+    width: 150px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.nav-menu a:hover span,
+.nav-menu li:hover > a span {
+    opacity: 1;
+}
+
+.nav-menu .active, .nav-menu .active:focus {
+    background: var(--middle-color--);
+    color: #fff !important;
+}
+
+@media (min-width: 700px) and (max-width: 991px) {
+
+    .wrapper{
+        max-width: 700px;
+        width: 700px;
+        margin: 0 auto;
+      }
+
+      #header {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+        padding: 15px;
+        border-right: none;
+    }
+    #home {
+        width: 100%;
+        height: 65vh;
+        background: url("../img/fit-duo-banner.png") top right no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    .black-container {
+        width: 100%;
+        height: 140px;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+
+    .home-content {
+        text-align: left;
+        max-width: 100%;
+        color: white;
+        margin: 0;
+        width: 100%;
+    }
+
+    .popup {
+        margin-top: 150px;
+        max-width: 250px;
+        width: 80%;
+        right: -30px;
+    }
+
+    .animate-popup {
+        right: 72px;
+    }
+
+    .nav-menu a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 56px;
+        height: 56px;
+        font-size: 14px;
+        padding: 0;
+    }
+    
+    .nav-menu a i {
+        font-size: 20px;
+        line-height: 56px;
+    }
+
+    .nav-menu a:hover, .nav-menu li:hover > a {
+        width: 150px;
+        justify-content: center;
+    }
+    
+    #home h1 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    #home p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+
+    .wrapper{
+        max-width: 350px;
+        width: 350px;
+        margin: 0 auto;
+      }
+
+      #header {
+        position: absolute;
+        top: 35px;
+        left: -60px;
+        width: 100%;
+        z-index: 3;
+        padding: 15px;
+        border-right: none;
+    }
+
+    .sub_header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    
+    .sub_header .title {
+        font-size: 20px !important;
+        font-weight: bold !important;
+        color: var(--main-color--) !important;
+        margin: 0 0 0 5px !important;
+        padding: 0 !important; 
+    }
+    
+    .sub_header .info {
+        display: none;
+    }
+
+    .mobile-icons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .mobile-icons i {
+        display: inline-block;
+        font-size: 20px;
+        color: white;
+    }
+    #home {
+        width: 100%;
+        height: 45vh;
+        background: url("../img/fit-duo-banner.png") top right no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .black-container {
+        width: 100%;
+        height: 100px;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-left: 15px;
+        box-sizing: border-box;
+    }
+
+    .home-content {
+        width: 100%;
+        max-width: 100%;
+        color: white;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    .popup {
+        margin-top: 25px;
+        max-width: 200px;
+        width:30%;
+        right: -250px; 
+    }
+
+    .animate-popup {
+        right: 78px;
+    }
+ 
+    .nav-menu a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
+        padding: 0;
+    }
+    /* icon position */
+    .nav-menu a i,
+    .nav-menu a:focus i {
+        font-size: 18px;
+        color: #fff !important;
+        transition: none;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .nav-menu a span {
+        opacity: 0;
+        color: #fff !important;
+        position: absolute;
+        left: 40px; 
+        font-size: 16px;
+    }
+    .nav-menu a:hover, .nav-menu li:hover > a {
+        width: 130px;
+        justify-content: center;
+    }  
+
+    #home h1 {
+        font-size: 22px;
+        line-height: 28px;
+        margin: 0;
+    }
+
+    #home h1 span {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    #home p {
+        font-size: 16px;
+        margin: 5px 0 0 0;
+    }
+}

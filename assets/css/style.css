@@ -1,0 +1,34 @@
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+*{
+  scroll-behavior: smooth;
+}
+
+:root{
+  --main-color--:#00DFF7;
+  --hover-color--:#0c12c996;
+  --middle-color--: #009AD7;
+  --blue-hover-color--:#4a83ffd8;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #272829;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color--);
+}
+
+a:hover {
+
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
