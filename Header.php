@@ -26,6 +26,8 @@
 <!-- Custom CSS -->
 <link href="assets/css/headerStyle.css" rel="stylesheet">
 <link href="assets/css/footerStyle.css" rel="stylesheet">
+<link href="assets/css/navigation.css" rel="stylesheet">
+<link href="assets/css/indexStyle.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -44,7 +46,7 @@
   </div>
 </header>
 
-<section id="home">
+<section id="header_section">
     <div class="sub_header"> 
         <p class="title"> MyFitGuide </p>
 
@@ -60,7 +62,7 @@
     </div>
 
     <div class="home-inner">
-        <div class="black-container">
+        <div class="black_container">
           <div class="wrapper">
             <div class="home-content">
                 <h1>Welkom bij <span id="home_span">MyFitGuide</span></h1>
@@ -69,10 +71,11 @@
                 </a></p>
             </div>
             </div>
-        </div>
-        <div id="popupContainer">
+            <div id="popupContainer">
         <img src="assets/img/popup-black-bg.png" alt="PB" class="popup">
       </div>
+        </div>
+        
     </div>
 </section>
 

@@ -1,0 +1,144 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar .nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+    color: var(--hover-color--);
+}
+
+.navbar .nav-link.active {
+    color: var(--main-color--);
+}
+
+.navbar-brand {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#header {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    padding: 15px;
+    border-right: none;
+}
+
+.nav-menu {
+    padding: 0;
+    display: block;
+    text-align: left;
+}
+
+/* Reset standaardstijlen van lijst en items */
+.nav-menu ul, 
+.nav-menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Extra styling voor de lijst-items */
+.nav-menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+
+/* cirkels */
+.nav-menu a, .nav-menu a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    color: #fff !important;
+    font-size: 15px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    height: 45px;
+    width: 45px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    padding: 0 10px;
+    transition: width 0.5s ease-in-out, background 0.3s ease-in-out;
+}
+
+
+/* positioneer icon in cirkel */
+.nav-menu a i,
+.nav-menu a:focus i {
+    font-size: 18px;
+    color: #fff !important;
+    transition: none;
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-menu a span {
+    opacity: 0;
+    color: #fff !important;
+    position: absolute;
+    left: 55px;
+}
+
+.nav-menu a:hover, .nav-menu li:hover > a {
+    width: 150px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.nav-menu a:hover span,
+.nav-menu li:hover > a span {
+    opacity: 1;
+}
+
+.nav-menu .active, .nav-menu .active:focus {
+    background: var(--middle-color--);
+    color: #fff !important;
+    font-weight: 500; /* Zet dit gelijk aan de standaard */
+    text-decoration: none;
+}
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 700px) {
+
+    .mobile-icons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .mobile-icons i {
+        display: inline-block;
+        font-size: 18px;
+        color: white;
+    }
+}
