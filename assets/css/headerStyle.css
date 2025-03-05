@@ -209,7 +209,7 @@
         position: relative;
         right: -450px;
         transform: translateY(0);
-        transition: right 1.5s ease-out, opacity 1s ease-in;
+        transition: right 0.7s ease-out, opacity 0.5s ease-in;
         opacity: 0;
         cursor: pointer;
         margin-top: 100px;
@@ -241,7 +241,8 @@
       #header {
         position: absolute;
         top: 35px;
-        left: -20px;
+        margin-left: -30px;
+        margin-top: -15px;
         width: 100%;
         z-index: 3;
         padding: 15px;
@@ -268,7 +269,7 @@
         font-size: 20px !important;
         font-weight: bold !important;
         color: var(--main-color--) !important;
-        margin: 0 0 0 5px !important;
+        margin: 0 !important;
         padding: 0 !important; 
     }
     
@@ -285,13 +286,20 @@
         top: 50%;
         transform: translateY(-50%);
     }
-
+    
+    .mobile-icons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+    
     .mobile-icons i {
         display: inline-block;
-        font-size: 20px;
+        font-size: 28px;
         color: white;
     }
-
+   
     /* header section */
     #header_section {
         width: 100%;
@@ -342,6 +350,7 @@
         text-align: left;
         margin: 0;
         padding: 0;
+        margin-left: -10px;
     }
 
     .popup {

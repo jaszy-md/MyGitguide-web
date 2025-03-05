@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(startImageAnimation, 2000);
+    setTimeout(startImageAnimation, 500);
 });
 
 function startImageAnimation() {
