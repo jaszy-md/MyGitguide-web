@@ -126,17 +126,19 @@
 
 /* Mobile weergave */
 @media (min-width: 320px) and (max-width: 700px) {
+
+
     .navbar {
         padding: 5px 10px;
     }
 
     .navbar .nav-link {
-        font-size: 14px;
-        padding: 8px 15px;
+        font-size: 12px;
+        padding: 6px 12px;
     }
 
     .navbar-brand {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .nav-menu {
@@ -144,15 +146,54 @@
     }
 
     .nav-menu > ul > li {
-        margin-bottom: 5px;
+        margin-bottom: 4px;
     }
 
+    /* ✅ Basisformaat van het menu-item */
     .nav-menu a {
-        font-size: 14px;
-        padding: 0 8px;
+        font-size: 12px;
+        padding: 0 6px;
+        height: 35px; /* ✅ Hoogte blijft altijd vast */
+        width: 35px;
+        transition: width 0.4s ease-in-out, background 0.3s ease-in-out;
     }
 
+    /* ✅ Open effect: alleen breedte verandert, hoogte blijft */
+    .nav-menu a.open {
+        width: 120px;
+        height: 35px; /* ✅ Hoogte blijft exact gelijk */
+    }
+
+    /* ✅ Sluiten zonder te vergroten */
+    .nav-menu a.closing {
+        width: 35px !important;
+        height: 35px !important;
+        transition: width 0.4s ease-in-out;
+    }
+
+    /* ✅ Icoon blijft netjes in het midden */
+    .nav-menu a i {
+        font-size: 14px;
+        left: 10px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    /* ✅ Tekstpositie aanpassen */
     .nav-menu a span {
-        left: 55px;
+        font-size: 12px;
+        left: 42px;
+    }
+
+    /* ✅ Tekst fade-in effect blijft netjes */
+    .nav-menu a.open span {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* ✅ Zorg ervoor dat het item nooit groter wordt */
+    .nav-menu a:not(.open) {
+        width: 35px !important;
+        height: 35px !important;
+        overflow: hidden;
     }
 }
