@@ -1,3 +1,4 @@
+// popup
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(startImageAnimation, 500);
 });
@@ -79,37 +80,52 @@ window.onload = function() {
           new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
-    // INJECT CSS
+
     var css = document.createElement("style");
     css.type = "text/css";
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
     document.body.appendChild(css);
 };
 
+// Smooth opening en closing of nav menu
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".nav-menu a");
     const navTextLinks = document.querySelectorAll(".nav-menu a span");
 
+    function setActiveIcon() {
+        const currentPage = window.location.pathname.split("/").pop(); // Huidige pagina naam
+        navLinks.forEach(link => {
+            const icon = link.querySelector("i");
+            const linkHref = link.getAttribute("href");
+
+            if (icon) {
+                if (linkHref === currentPage) {
+                    link.classList.add("active-link"); // Voeg actieve class toe
+                } else {
+                    link.classList.remove("active-link"); // Verwijder actieve class
+                }
+            }
+        });
+    }
+
     navLinks.forEach(link => {
         link.addEventListener("click", function (event) {
-            event.preventDefault(); // Voorkomt directe navigatie
+            event.preventDefault();
             
-            // Sluit andere geopende menu-items
             navLinks.forEach(otherLink => {
-                if (otherLink !== this && otherLink.classList.contains("open")) {
+                if (otherLink !== this) {
                     otherLink.classList.remove("open");
                 }
             });
 
-            // Toggle open/dicht op geklikte item
             this.classList.toggle("open");
         });
     });
 
-    // Klikken op de tekst stuurt door naar de pagina, maar alleen als het menu open is
+    // Sends to page after open
     navTextLinks.forEach(span => {
         span.addEventListener("click", function (event) {
-            event.stopPropagation(); // Voorkomt sluiten van het menu
+            event.stopPropagation();
 
             const url = this.getAttribute("data-href");
             const parentLink = this.closest("a");
@@ -119,7 +135,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    // Zorgt dat bij pagina load de juiste icon blauw wordt
+    setActiveIcon();
 });
+
 
 
 function flipCard(cardElement) {

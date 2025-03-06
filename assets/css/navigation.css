@@ -1,199 +1,198 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .navbar .nav-link {
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 20px;
-    transition: color 0.3s ease-in-out;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: color 0.3s ease-in-out;
 }
 
 .navbar .nav-link:hover {
-    color: var(--hover-color--);
+  color: var(--hover-color--);
 }
 
 .navbar .nav-link.active {
-    color: var(--main-color--);
+  color: var(--main-color--);
 }
 
 .navbar-brand {
-    font-size: 18px;
-    font-weight: 500;
-    color: #ffffff;
-    text-transform: uppercase;
-    text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 #header {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    z-index: 9;
-    padding: 15px;
-    border-right: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  padding: 15px;
+  border-right: none;
 }
 
 .nav-menu {
-    padding: 0;
-    display: block;
-    text-align: left;
+  padding: 0;
+  display: block;
+  text-align: left;
 }
 
 /* Reset standaardstijlen van lijst en items */
-.nav-menu ul, 
+.nav-menu ul,
 .nav-menu li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* Extra styling voor de lijst-items */
 .nav-menu > ul > li {
-    position: relative;
-    white-space: nowrap;
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 8px;
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
 }
 
 /* Cirkels altijd zichtbaar */
-.nav-menu a, .nav-menu a:focus {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    color: #fff !important;
-    font-size: 15px;
-    border-radius: 50px;
-    background: rgba(0, 0, 0, 0.7);
-    height: 45px;
-    width: 45px; /* Oorspronkelijke breedte */
-    overflow: hidden;
-    position: relative;
-    white-space: nowrap;
-    padding: 0 10px;
-    transition: width 0.4s ease-in-out, background 0.3s ease-in-out;
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  color: #fff !important;
+  font-size: 15px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  height: 45px;
+  width: 45px;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  padding: 0 10px;
+  transition: width 0.4s ease-in-out, background 0.3s ease-in-out;
 }
 
 /* Positioneer icon in cirkel */
 .nav-menu a i {
-    font-size: 18px;
-    color: #fff !important;
-    transition: color 0.3s ease-in-out;
-    position: absolute;
-    left: 13px;
-    top: 50%;
-    transform: translateY(-50%);
+  font-size: 18px;
+  color: #fff !important;
+  transition: color 0.3s ease-in-out;
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Actieve icon kleur */
+.nav-menu a.active-link i {
+  color: var(--main-color--) !important;
 }
 
 /* Smooth tekst fade-in */
 .nav-menu a span {
-    font-size: 15px; /* Voorkomt dat de grootte verandert */
-    opacity: 0;
-    transform: translateX(-10px);
-    color: #fff !important;
-    position: absolute;
-    left: 55px;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-size: 15px;
+  opacity: 0;
+  transform: translateX(-10px);
+  color: #fff !important;
+  position: absolute;
+  left: 55px;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 /* Open effect - alleen breedte verandert, hoogte blijft 45px */
 .nav-menu a.open {
-    width: 150px;
+  width: 150px;
 }
 
 .nav-menu a.open span {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Smooth sluiten */
 .nav-menu a.closing {
-    width: 45px;
-    transition: width 0.4s ease-in-out;
-}
-
-/* Actief menu-item (icoon verandert van kleur) */
-.nav-menu .active i {
-    color: var(--main-color--) !important;
+  width: 45px;
+  transition: width 0.4s ease-in-out;
 }
 
 /* Mobile weergave */
 @media (min-width: 320px) and (max-width: 700px) {
+  .navbar {
+    padding: 5px 10px;
+  }
 
+  .navbar .nav-link {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
 
-    .navbar {
-        padding: 5px 10px;
-    }
+  .navbar-brand {
+    font-size: 14px;
+  }
 
-    .navbar .nav-link {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
+  .nav-menu {
+    text-align: center;
+  }
 
-    .navbar-brand {
-        font-size: 14px;
-    }
+  .nav-menu > ul > li {
+    margin-bottom: 4px;
+  }
 
-    .nav-menu {
-        text-align: center;
-    }
+  /* ✅ Basisformaat van het menu-item */
+  .nav-menu a {
+    font-size: 12px;
+    padding: 0 6px;
+    height: 35px;
+    width: 35px;
+    transition: width 0.4s ease-in-out, background 0.3s ease-in-out;
+  }
 
-    .nav-menu > ul > li {
-        margin-bottom: 4px;
-    }
+  /* ✅ Open effect: alleen breedte verandert, hoogte blijft */
+  .nav-menu a.open {
+    width: 120px;
+    height: 35px;
+  }
 
-    /* ✅ Basisformaat van het menu-item */
-    .nav-menu a {
-        font-size: 12px;
-        padding: 0 6px;
-        height: 35px; /* ✅ Hoogte blijft altijd vast */
-        width: 35px;
-        transition: width 0.4s ease-in-out, background 0.3s ease-in-out;
-    }
+  /* ✅ Sluiten zonder te vergroten */
+  .nav-menu a.closing {
+    width: 35px !important;
+    height: 35px !important;
+    transition: width 0.4s ease-in-out;
+  }
 
-    /* ✅ Open effect: alleen breedte verandert, hoogte blijft */
-    .nav-menu a.open {
-        width: 120px;
-        height: 35px; /* ✅ Hoogte blijft exact gelijk */
-    }
+  /* ✅ Icoon blijft netjes in het midden */
+  .nav-menu a i {
+    font-size: 14px;
+    left: 10px;
+    transition: color 0.3s ease-in-out;
+  }
 
-    /* ✅ Sluiten zonder te vergroten */
-    .nav-menu a.closing {
-        width: 35px !important;
-        height: 35px !important;
-        transition: width 0.4s ease-in-out;
-    }
+  /* ✅ Tekstpositie aanpassen */
+  .nav-menu a span {
+    font-size: 12px;
+    left: 42px;
+  }
 
-    /* ✅ Icoon blijft netjes in het midden */
-    .nav-menu a i {
-        font-size: 14px;
-        left: 10px;
-        transition: color 0.3s ease-in-out;
-    }
+  /* ✅ Tekst fade-in effect blijft netjes */
+  .nav-menu a.open span {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
-    /* ✅ Tekstpositie aanpassen */
-    .nav-menu a span {
-        font-size: 12px;
-        left: 42px;
-    }
-
-    /* ✅ Tekst fade-in effect blijft netjes */
-    .nav-menu a.open span {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    /* ✅ Zorg ervoor dat het item nooit groter wordt */
-    .nav-menu a:not(.open) {
-        width: 35px !important;
-        height: 35px !important;
-        overflow: hidden;
-    }
+  /* ✅ Zorg ervoor dat het item nooit groter wordt */
+  .nav-menu a:not(.open) {
+    width: 35px !important;
+    height: 35px !important;
+    overflow: hidden;
+  }
 }
