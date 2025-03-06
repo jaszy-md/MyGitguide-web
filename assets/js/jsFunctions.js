@@ -88,12 +88,13 @@ window.onload = function() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".nav-menu a");
+    const navTextLinks = document.querySelectorAll(".nav-menu a span");
 
     navLinks.forEach(link => {
         link.addEventListener("click", function (event) {
-            event.stopPropagation(); // Voorkomt bubbelen
-
-            // Sluit alle andere menu-items smooth
+            event.preventDefault(); // Voorkomt directe navigatie
+            
+            // Sluit andere geopende menu-items
             navLinks.forEach(otherLink => {
                 if (otherLink !== this && otherLink.classList.contains("open")) {
                     otherLink.classList.remove("open");
@@ -105,8 +106,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Klikken op de tekst stuurt door naar de pagina, maar alleen als het menu open is
+    navTextLinks.forEach(span => {
+        span.addEventListener("click", function (event) {
+            event.stopPropagation(); // Voorkomt sluiten van het menu
 
+            const url = this.getAttribute("data-href");
+            const parentLink = this.closest("a");
+
+            if (parentLink.classList.contains("open") && url) {
+                window.location.href = url;
+            }
+        });
+    });
 });
+
 
 function flipCard(cardElement) {
     cardElement.classList.toggle('flipped');
