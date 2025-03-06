@@ -85,3 +85,29 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
     document.body.appendChild(css);
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-menu a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.stopPropagation(); // Voorkomt bubbelen
+
+            // Sluit alle andere menu-items smooth
+            navLinks.forEach(otherLink => {
+                if (otherLink !== this && otherLink.classList.contains("open")) {
+                    otherLink.classList.remove("open");
+                }
+            });
+
+            // Toggle open/dicht op geklikte item
+            this.classList.toggle("open");
+        });
+    });
+
+
+});
+
+function flipCard(cardElement) {
+    cardElement.classList.toggle('flipped');
+}

@@ -62,8 +62,7 @@
     margin-bottom: 8px;
 }
 
-
-/* cirkels */
+/* Cirkels altijd zichtbaar */
 .nav-menu a, .nav-menu a:focus {
     display: flex;
     align-items: center;
@@ -74,55 +73,59 @@
     border-radius: 50px;
     background: rgba(0, 0, 0, 0.7);
     height: 45px;
-    width: 45px;
+    width: 45px; /* Oorspronkelijke breedte */
     overflow: hidden;
     position: relative;
     white-space: nowrap;
     padding: 0 10px;
-    transition: width 0.5s ease-in-out, background 0.3s ease-in-out;
+    transition: width 0.4s ease-in-out, background 0.3s ease-in-out;
 }
 
-
-/* positioneer icon in cirkel */
-.nav-menu a i,
-.nav-menu a:focus i {
+/* Positioneer icon in cirkel */
+.nav-menu a i {
     font-size: 18px;
     color: #fff !important;
-    transition: none;
+    transition: color 0.3s ease-in-out;
     position: absolute;
     left: 13px;
     top: 50%;
     transform: translateY(-50%);
 }
 
+/* Smooth tekst fade-in */
 .nav-menu a span {
+    font-size: 15px; /* Voorkomt dat de grootte verandert */
     opacity: 0;
+    transform: translateX(-10px);
     color: #fff !important;
     position: absolute;
     left: 55px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.nav-menu a:hover, .nav-menu li:hover > a {
+/* Open effect - alleen breedte verandert, hoogte blijft 45px */
+.nav-menu a.open {
     width: 150px;
-    height: 45px;
-    background: rgba(0, 0, 0, 0.7);
 }
 
-.nav-menu a:hover span,
-.nav-menu li:hover > a span {
+.nav-menu a.open span {
     opacity: 1;
+    transform: translateX(0);
 }
 
-.nav-menu .active, .nav-menu .active:focus {
-    background: var(--middle-color--);
-    color: #fff !important;
-    font-weight: 500;
-    text-decoration: none;
+/* Smooth sluiten */
+.nav-menu a.closing {
+    width: 45px;
+    transition: width 0.4s ease-in-out;
 }
 
+/* Actief menu-item (icoon verandert van kleur) */
+.nav-menu .active i {
+    color: var(--main-color--) !important;
+}
 
+/* Mobile weergave */
 @media (min-width: 320px) and (max-width: 700px) {
-
     .navbar {
         padding: 5px 10px;
     }
@@ -144,26 +147,12 @@
         margin-bottom: 5px;
     }
 
-    .nav-menu a, .nav-menu a:focus {
-        height: 40px;
-        width: 40px;
+    .nav-menu a {
         font-size: 14px;
         padding: 0 8px;
     }
 
-    .nav-menu a i, 
-    .nav-menu a:focus i {
-        font-size: 16px;
-        left: 10px;
-    }
-
     .nav-menu a span {
-        left: 45px;
+        left: 55px;
     }
-
-    .nav-menu a:hover, .nav-menu li:hover > a {
-        width: 130px;
-        height: 40px;
-    }
-
 }
