@@ -13,7 +13,7 @@ body {
 }
 
 :root {
-  --main-color--: #00dff7;
+  --main-color--: #88b9dd;
   --hover-color--: #0c12c996;
   --middle-color--: #009ad7;
   --blue-hover-color--: #4a83ffd8;
@@ -44,4 +44,13 @@ h6 {
 .spacing {
   width: 100%;
   height: 200px;
+}
+
+.white_container {
+  background-color: rgb(255, 255, 255);
+  height: 240px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

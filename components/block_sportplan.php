@@ -4,7 +4,6 @@ function renderBlock($header, $content, $image, $frontContent)
 ?>
     <div class="block" onclick="flipCard(this)">
         <div class="block-inner">
-            <!-- Voorkant met dynamische inhoud -->
             <div class="block-front">
                 <div class="block-content front-content">
                     <ul>
@@ -15,7 +14,6 @@ function renderBlock($header, $content, $image, $frontContent)
                 </div>
             </div>
 
-            <!-- Achterkant met dumbbell icons in content -->
             <div class="block-back">
                 <div class="block-header">Fitplan: <?php echo htmlspecialchars($header); ?></div>
                 <div class="block-content">

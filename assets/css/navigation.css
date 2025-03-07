@@ -29,16 +29,6 @@
   text-decoration: none;
 }
 
-#header {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100%;
-  z-index: 9;
-  padding: 15px;
-  border-right: none;
-}
-
 .nav-menu {
   padding: 0;
   display: block;
@@ -127,10 +117,6 @@
 
 /* Mobile weergave */
 @media (min-width: 320px) and (max-width: 700px) {
-  .navbar {
-    padding: 5px 10px;
-  }
-
   .navbar .nav-link {
     font-size: 12px;
     padding: 6px 12px;
@@ -142,10 +128,6 @@
 
   .nav-menu {
     text-align: center;
-  }
-
-  .nav-menu > ul > li {
-    margin-bottom: 4px;
   }
 
   /* ✅ Basisformaat van het menu-item */

@@ -43,7 +43,7 @@
         <ul>
           <li><a href="index.php" class="nav-link scrollto"><i class="material-icons-outlined">home</i> <span>Home</span></a></li>
           <li><a href="sportplan.php" class="nav-link scrollto"><i class="material-icons-outlined">directions_run</i> <span>Sportplan</span></a></li>
-          <li><a href="#" class="nav-link scrollto"><i class="material-icons-outlined">event_available</i> <span>Boeken</span></a></li>
+          <li><a href="bookings.php" class="nav-link scrollto"><i class="material-icons-outlined">event_available</i> <span>Boeken</span></a></li>
           <li><a href="#" class="nav-link scrollto"><i class="material-icons-outlined">call</i> <span>Contact</span></a></li>
         </ul>
 
@@ -67,20 +67,22 @@
 
     </div>
 
-    <div class="home-inner">
-      <div class="black_container">
-        <div class="wrapper">
-          <div class="home-content">
-            <h1>Welkom bij <span id="home_span">MyFitGuide</span></h1>
-            <p><a href="#" class="typewrite" data-period="2000" data-type='[ "Gezondheid", "Zelfverzekerdheid", "Doelen behalen" ]'>
-                <span class="wrap"></span>
-              </a></p>
-          </div>
+    <div class="black_container">
+      <div class="wrapper">
+        <div class="home-content">
+          <h1>Welkom bij <span id="home_span">MyFitGuide</span></h1>
+          <p><a href="#" class="typewrite" data-period="2000" data-type='[ "Gezondheid", "Zelfverzekerdheid", "Doelen behalen" ]'>
+              <span class="wrap"></span>
+            </a></p>
         </div>
+
+        <!-- ✅ Popup staat nu BINNEN de wrapper -->
         <div id="popupContainer">
           <img src="assets/img/popup-black-bg.png" alt="PB" class="popup">
         </div>
       </div>
+    </div>
+
 
     </div>
   </section>

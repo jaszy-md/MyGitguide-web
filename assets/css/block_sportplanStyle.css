@@ -1,12 +1,12 @@
 .block {
   width: 250px;
   max-width: 250px;
-  height: 240px; /* Zorg dat beide kanten even hoog zijn */
+  height: 240px;
   border-radius: 15px;
   overflow: hidden;
   margin: 10px;
   position: relative;
-  perspective: 1000px; /* Nodig voor flip */
+  perspective: 1000px;/
 }
 
 .block-inner {
@@ -21,7 +21,6 @@
   transform: rotateY(180deg);
 }
 
-/* Voor- en achterkant van de kaart */
 .block-front,
 .block-back {
   width: 100%;
@@ -35,7 +34,6 @@
   justify-content: center;
 }
 
-/* ✅ Voorkant: Blauw met grotere, bold tekst in het midden */
 .block-front {
   background: linear-gradient(to bottom, #a3d9ff, #d5ebff);
   text-align: center;
@@ -46,16 +44,16 @@
 }
 
 .front-content {
-  font-size: 18px; /* Grotere tekst */
-  font-weight: bold; /* Dikke letters */
+  font-size: 18px;
+  font-weight: bold;
   color: #004080;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%; /* Volledige hoogte benutten */
-  width: 100%; /* Volledige breedte benutten */
-  flex-direction: column; /* Zorgt dat meerdere elementen netjes onder elkaar staan */
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
 }
 
 .front-content ul {
@@ -64,12 +62,11 @@
 }
 
 .front-text {
-  font-size: 20px; /* Nog iets groter */
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
 
-/* ✅ Achterkant blijft hetzelfde */
 .block-back {
   transform: rotateY(180deg);
   background: linear-gradient(to bottom, #ffffff, #f0f0f0);
@@ -89,7 +86,7 @@
   width: 100%;
 }
 .list-icon {
-  width: 20px; /* Past de grootte van het icoon aan */
+  width: 20px;
   height: auto;
   flex-shrink: 0;
   align-self: center;

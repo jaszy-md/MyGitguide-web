@@ -1,0 +1,196 @@
+/* ✅ Wrapper om de booking-container te centreren */
+.booking-wrapper {
+  display: flex;
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+  height: 100vh; /* Volledige viewport hoogte */
+  width: 100%;
+  padding: 20px;
+}
+
+/* ✅ Booking-container (origineel teruggezet voor desktop) */
+.booking-container {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Witte achtergrond met lichte transparantie */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px; /* ✅ Blijft breed op desktop */
+  text-align: center;
+}
+
+/* ✅ Titels */
+.booking-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #272829;
+}
+
+/* ✅ Formulierstijl */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #272829;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--main-color--);
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f8f9fa;
+  transition: 0.3s ease-in-out;
+}
+
+/* ✅ Input focus effect */
+.form-group input:focus {
+  border-color: #009ad7;
+  outline: none;
+  background: #fff;
+}
+
+/* ✅ Verzenden-knop */
+button {
+  background: var(--main-color--); /* Variabele kleur */
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #009ad7;
+}
+
+/* ✅ Berichtweergave */
+#message {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #272829;
+}
+
+/* 📱 ✅ Mobiele weergave - Alleen verkleinen op kleine schermen */
+@media (max-width: 600px) {
+  .booking-container {
+    width: 85%; /* ✅ Kleiner in verhouding op mobiele schermen */
+    max-width: 350px; /* ✅ Beperkt de breedte op kleine schermen */
+    padding: 20px; /* ✅ Minder padding voor een strakkere layout */
+  }
+
+  .form-group input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* ✅ Stijl voor de modal achtergrond */
+.modal {
+  display: none; /* Verborgen totdat hij getoond wordt */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Modal content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ✅ Afbeelding in de popup */
+.popup-img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* ✅ Titel en tekst */
+.modal-content h2 {
+  font-size: 22px;
+  color: #272829;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* ✅ Sluitknop (X) */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ✅ Sluiten-knop */
+#closePopup {
+  background: var(--main-color--);
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#closePopup:hover {
+  background: #009ad7;
+}
+
+/* ✅ Animatie voor het in beeld laten verschijnen van de popup */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 📱 ✅ Mobiele weergave */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+  }
+}

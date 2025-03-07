@@ -93,16 +93,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const navTextLinks = document.querySelectorAll(".nav-menu a span");
 
     function setActiveIcon() {
-        const currentPage = window.location.pathname.split("/").pop(); // Huidige pagina naam
+        const currentPage = window.location.pathname.split("/").pop();
         navLinks.forEach(link => {
             const icon = link.querySelector("i");
             const linkHref = link.getAttribute("href");
 
             if (icon) {
                 if (linkHref === currentPage) {
-                    link.classList.add("active-link"); // Voeg actieve class toe
+                    link.classList.add("active-link");
                 } else {
-                    link.classList.remove("active-link"); // Verwijder actieve class
+                    link.classList.remove("active-link");
                 }
             }
         });
@@ -136,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Zorgt dat bij pagina load de juiste icon blauw wordt
     setActiveIcon();
 });
 
@@ -145,3 +144,4 @@ document.addEventListener("DOMContentLoaded", function () {
 function flipCard(cardElement) {
     cardElement.classList.toggle('flipped');
 }
+

@@ -1,11 +1,10 @@
 <?php
 include_once 'Header.php';
-include_once 'components/block_sportplan.php'; // Verwijzing aangepast
+include_once 'components/block_sportplan.php';
 ?>
 
 <div class="spacing"></div>
 
-<!-- Fitcheck blok (los van de array) -->
 <div class="fitcheck-block">
     <div class="block-header">FITCHECK</div>
     <div class="block-content">
@@ -19,7 +18,6 @@ include_once 'components/block_sportplan.php'; // Verwijzing aangepast
 </div>
 
 <div class="wrapper">
-    <!-- Blauwe lijn onder de Fitcheck-container -->
     <div class="fitcheck-line"></div>
 </div>
 
@@ -78,6 +76,5 @@ include_once 'components/block_sportplan.php'; // Verwijzing aangepast
     </div>
 </main>
 
-<?php include 'footer.php'; ?>
+<?php include 'Footer.php'; ?>
 <script src="assets/js/sportplanScript.js"></script>
-</body>
