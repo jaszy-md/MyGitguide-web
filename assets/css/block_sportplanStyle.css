@@ -1,0 +1,73 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 250px; /* Vaste breedte */
+  max-width: 250px;
+  border-radius: 15px; /* Afgeronde hoeken */
+  overflow: hidden; /* Voorkomt dat de gradient buiten de border-radius valt */
+  margin: 10px;
+  position: relative;
+}
+
+.block-header {
+  height: 40px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9),
+    rgba(92, 92, 92, 0.9)
+  ); /* 70% transparantie */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.block-content {
+  height: 200px;
+  background: linear-gradient(to bottom, #a3d9ff, #d5ebff);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Tekst links uitlijnen */
+  justify-content: space-between;
+  padding: 15px;
+  padding-right: 40px;
+  position: relative;
+}
+
+.content-list {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Verwijdert standaard bullets */
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-list li {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #333;
+  display: flex;
+  align-items: center; /* Zorgt ervoor dat de afbeelding en tekst op één lijn staan */
+  gap: 8px; /* Afstand tussen de afbeelding en de tekst */
+}
+
+.list-icon {
+  width: 16px; /* Pas de grootte van de dumbbell aan */
+  height: auto;
+  flex-shrink: 0; /* Voorkomt dat de afbeelding wordt verkleind */
+  align-self: flex-start; /* Zorgt ervoor dat de afbeelding uitgelijnd blijft aan de bovenkant */
+}
+
+.list-text {
+  display: block; /* Zorgt ervoor dat tekst correct uitlijnt */
+  flex: 1; /* Laat tekst de beschikbare ruimte gebruiken */
+}
+
+.content-image {
+  width: 95px; /* Pas aan naar wens */
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

@@ -1,88 +1,179 @@
-/* Algemene instellingen */
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-}
-
-/* Wrapper */
-.wrapper {
-  max-width: 1440px;
+/* ========== STYLING VOOR BLOKKEN ========== */
+.block-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 960px; /* Smallere wrapper voor max 3 blokken naast elkaar */
   margin: 0 auto;
-  padding: 20px;
 }
 
-/* Grid container */
-.grid-container {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  margin-top: 50px;
+.block-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
 }
 
-/* Flip Card Stijlen */
-.flip-card {
-  perspective: 1000px;
+.spacing {
+  width: 100%;
+  min-height: 100px;
+  display: block;
+}
+
+.block {
+  flex: 1 1 calc(33.333% - 20px); /* Maximaal 3 naast elkaar */
+}
+
+/* ========== STYLING VOOR FITCHECK ========== */
+.fitcheck-block {
+  width: 600px;
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 15px;
+  overflow: hidden;
   position: relative;
-  width: 100%;
-  height: 200px;
+  background: white; /* Zorg dat het zichtbaar is */
+  min-height: 280px; /* Meer hoogte */
 }
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+/* Header styling */
+.fitcheck-block .block-header {
+  height: 40px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9),
+    rgba(92, 92, 92, 0.9)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  font-size: 24px;
   color: white;
-  transition: background 0.3s ease;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-/* Zorg dat de afbeelding de volledige kaart vult zonder vervorming */
-.flip-card-front {
-  background: url("../img/fit-plan-block.png") no-repeat center center;
-  background-size: cover;
+/* Content styling */
+.fitcheck-block .block-content {
+  height: 240px;
+  background: linear-gradient(to bottom, #a3d9ff, #d5ebff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
 }
 
-.flip-card-back {
-  background: url("../img/fit-plan-block-back.png") no-repeat center center;
-  background-size: cover;
-  transform: rotateY(180deg);
+/* Fitcheck tekst */
+.fitcheck-text {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 11%; /* Iets boven de knoppen */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* Flip Effect */
-.flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
+/* Knoppen styling */
+.fitcheck-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  position: absolute;
+  top: 50%; /* Perfect in het midden */
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/* Animatie voor het binnenkomen van de blokken */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+/* Knoppen zelf */
+.fitcheck-button {
+  width: 120px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-weight: bold;
+  background-color: #d5ebff; /* Lichtblauwe achtergrond */
+}
+
+.agree {
+  border: 2px solid #008000; /* Groene rand */
+  color: #008000;
+}
+
+.disagree {
+  border: 2px solid #ff0000; /* Rode rand */
+  color: #ff0000;
+}
+
+/* Afbeelding: kleiner en exact onderaan gecentreerd */
+.fitcheck-image {
+  width: 20%; /* Kleinere afbeelding */
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Blauwe lijn onder de Fitcheck-container */
+.fitcheck-line {
+  width: 100%;
+  max-width: 960px; /* Zelfde breedte als .block-wrapper */
+  height: 2px; /* Dikte van de lijn */
+  background-color: #a3d9ff;
+  margin: 20px auto; /* Zorgt voor wat ruimte onder Fitcheck */
+}
+
+@media (max-width: 900px) {
+  .block {
+    flex: 1 1 calc(50% - 20px); /* 2 naast elkaar */
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
-.flip-card {
-  animation: fadeIn 0.5s ease both;
+@media (max-width: 600px) {
+  .block {
+    flex: 1 1 100%; /* 1 per rij */
+  }
+
+  /* ========== RESPONSIVE STYLING VOOR FITCHECK ========== */
+  .fitcheck-block {
+    width: 90%; /* Kleiner maken voor mobiele schermen */
+    min-height: 220px; /* Iets meer ruimte */
+  }
+
+  .fitcheck-text {
+    font-size: 16px;
+    top: 5%; /* Iets hoger geplaatst */
+    width: 90%; /* Voorkomt tekstbreuk */
+  }
+
+  .fitcheck-buttons {
+    flex-direction: row; /* Knoppen blijven naast elkaar */
+    justify-content: space-between;
+    width: 85%; /* Knoppen passen goed in de container */
+    top: 35%;
+  }
+
+  .fitcheck-button {
+    width: 40%; /* Knoppen kleiner maken */
+    padding: 8px 16px;
+    font-size: 12px; /* Kleiner lettertype */
+  }
+
+  /* Afbeelding kleiner maken en goed positioneren */
+  .fitcheck-image {
+    width: 30%; /* Kleiner maken voor betere zichtbaarheid */
+    height: auto;
+    position: absolute;
+    bottom: 10px; /* Meer ruimte onderaan */
+    left: 48%;
+    top: 40%;
+    transform: translateX(-50%);
+  }
 }

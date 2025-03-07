@@ -1,26 +1,26 @@
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-*{
+* {
   scroll-behavior: smooth;
 }
 
-:root{
-  --main-color--:#00DFF7;
-  --hover-color--:#0c12c996;
-  --middle-color--: #009AD7;
-  --blue-hover-color--:#4a83ffd8;
+:root {
+  --main-color--: #00dff7;
+  --hover-color--: #0c12c996;
+  --middle-color--: #009ad7;
+  --blue-hover-color--: #4a83ffd8;
 }
 body {
-  font-family: "Open Sans", sans-serif;
   color: #272829;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -29,11 +29,19 @@ a {
 }
 
 a:hover {
-
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
 }
 
+.spacing {
+  width: 100%;
+  height: 200px;
+}

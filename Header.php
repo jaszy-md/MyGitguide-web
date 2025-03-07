@@ -27,8 +27,10 @@
   <link href="assets/css/headerStyle.css" rel="stylesheet">
   <link href="assets/css/footerStyle.css" rel="stylesheet">
   <link href="assets/css/navigation.css" rel="stylesheet">
+  <link href="assets/css/block_sportplanStyle.css" rel="stylesheet">
   <link href="assets/css/indexStyle.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/sportplanStyle.css">
+
 
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
