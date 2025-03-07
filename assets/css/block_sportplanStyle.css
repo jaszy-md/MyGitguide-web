@@ -1,12 +1,78 @@
 .block {
-  display: flex;
-  flex-direction: column;
-  width: 250px; /* Vaste breedte */
+  width: 250px;
   max-width: 250px;
-  border-radius: 15px; /* Afgeronde hoeken */
-  overflow: hidden; /* Voorkomt dat de gradient buiten de border-radius valt */
+  height: 240px; /* Zorg dat beide kanten even hoog zijn */
+  border-radius: 15px;
+  overflow: hidden;
   margin: 10px;
   position: relative;
+  perspective: 1000px; /* Nodig voor flip */
+}
+
+.block-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flipped .block-inner {
+  transform: rotateY(180deg);
+}
+
+/* Voor- en achterkant van de kaart */
+.block-front,
+.block-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Voorkant: Blauw met grotere, bold tekst in het midden */
+.block-front {
+  background: linear-gradient(to bottom, #a3d9ff, #d5ebff);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.front-content {
+  font-size: 18px; /* Grotere tekst */
+  font-weight: bold; /* Dikke letters */
+  color: #004080;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Volledige hoogte benutten */
+  width: 100%; /* Volledige breedte benutten */
+  flex-direction: column; /* Zorgt dat meerdere elementen netjes onder elkaar staan */
+}
+
+.front-content ul {
+  list-style: none;
+  margin: 0;
+}
+
+.front-text {
+  font-size: 20px; /* Nog iets groter */
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ✅ Achterkant blijft hetzelfde */
+.block-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
 }
 
 .block-header {
@@ -15,11 +81,12 @@
     to right,
     rgba(0, 0, 0, 0.9),
     rgba(92, 92, 92, 0.9)
-  ); /* 70% transparantie */
+  );
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  width: 100%;
 }
 
 .block-content {
@@ -27,8 +94,6 @@
   background: linear-gradient(to bottom, #a3d9ff, #d5ebff);
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Tekst links uitlijnen */
-  justify-content: space-between;
   padding: 15px;
   padding-right: 40px;
   position: relative;
@@ -37,7 +102,7 @@
 .content-list {
   padding: 0;
   margin: 0;
-  list-style: none; /* Verwijdert standaard bullets */
+  list-style: none;
   padding-left: 0;
   display: flex;
   flex-direction: column;
@@ -48,24 +113,24 @@
   margin-bottom: 8px;
   color: #333;
   display: flex;
-  align-items: center; /* Zorgt ervoor dat de afbeelding en tekst op één lijn staan */
-  gap: 8px; /* Afstand tussen de afbeelding en de tekst */
+  align-items: center;
+  gap: 8px;
 }
 
 .list-icon {
-  width: 16px; /* Pas de grootte van de dumbbell aan */
+  width: 16px;
   height: auto;
-  flex-shrink: 0; /* Voorkomt dat de afbeelding wordt verkleind */
-  align-self: flex-start; /* Zorgt ervoor dat de afbeelding uitgelijnd blijft aan de bovenkant */
+  flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .list-text {
-  display: block; /* Zorgt ervoor dat tekst correct uitlijnt */
-  flex: 1; /* Laat tekst de beschikbare ruimte gebruiken */
+  display: block;
+  flex: 1;
 }
 
 .content-image {
-  width: 95px; /* Pas aan naar wens */
+  width: 95px;
   height: auto;
   position: absolute;
   bottom: 0;
