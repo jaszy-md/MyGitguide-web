@@ -15,13 +15,14 @@ function renderBlock($header, $content, $image, $frontContent)
                 </div>
             </div>
 
-            <!-- Achterkant: Behoudt originele styling -->
+            <!-- Achterkant met dumbbell icons in content -->
             <div class="block-back">
                 <div class="block-header">Fitplan: <?php echo htmlspecialchars($header); ?></div>
                 <div class="block-content">
                     <ul class="content-list">
                         <?php foreach ($content as $item): ?>
                             <li>
+                                <img src="assets/img/dumbell.png" alt="Dumbbell Icon" class="list-icon">
                                 <span class="list-text"><?php echo htmlspecialchars($item); ?></span>
                             </li>
                         <?php endforeach; ?>

@@ -173,7 +173,7 @@
     position: absolute;
     bottom: 10px; /* Meer ruimte onderaan */
     left: 48%;
-    top: 40%;
+    top: 45%;
     transform: translateX(-50%);
   }
 }
