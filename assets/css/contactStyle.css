@@ -1,4 +1,3 @@
-/* ✅ Algemene container */
 .contact-container {
   display: flex;
   justify-content: center;
@@ -7,7 +6,6 @@
   padding: 20px;
 }
 
-/* ✅ Middle color container */
 .middle-color-container {
   background: #dcf0ff;
   padding: 30px;
@@ -18,7 +16,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ✅ Titel en omschrijving */
 .middle-color-container h2 {
   font-size: 28px;
   color: #46779b;
@@ -31,32 +28,28 @@
   margin-bottom: 20px;
 }
 
-/* ✅ Contactinformatie */
 .contact-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 🔹 Links uitlijnen */
+  align-items: flex-start;
   gap: 15px;
   margin-bottom: 20px;
 }
 
-/* ✅ Zorgt ervoor dat de icon exact naast de tekst staat */
 .contact-item {
   display: flex;
-  align-items: flex-start; /* 🔹 Icon naar boven uitlijnen */
+  align-items: flex-start;
   gap: 12px;
   font-size: 16px;
   color: #333;
 }
 
-/* ✅ Icon omhoog zetten */
 .contact-item i {
   font-size: 20px;
   color: var(--main-color--);
-  margin-top: 2px; /* 🔹 Zorgt dat de icon hoger staat */
+  margin-top: 2px;
 }
 
-/* ✅ Links */
 .contact-item a {
   text-decoration: none;
   color: var(--main-color--);
@@ -67,14 +60,12 @@
   text-decoration: underline;
 }
 
-/* ✅ Google Maps container */
 .map-container {
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
 }
 
-/* ✅ Responsive aanpassingen */
 @media (max-width: 700px) {
   .middle-color-container {
     max-width: 90%;
@@ -82,16 +73,16 @@
   }
 
   .contact-info {
-    align-items: center; /* 🔹 Zorgt dat alles op mobiel netjes gecentreerd blijft */
+    align-items: center;
   }
 
   .contact-item {
     font-size: 14px;
-    align-items: center; /* 🔹 Op mobiel weer centreren */
+    align-items: center;
   }
 
   .contact-item i {
-    margin-top: 0; /* 🔹 Voorkomt dat de icon te hoog staat op mobiel */
+    margin-top: 0;
   }
 
   .map-container iframe {
