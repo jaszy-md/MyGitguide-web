@@ -3,6 +3,9 @@ include_once 'Header.php';
 include_once 'components/block_sportplan.php';
 ?>
 
+<head>
+    <link href="assets/css/block_sportplanStyle.css" rel="stylesheet">
+</head>
 <div class="spacing"></div>
 
 <div class="fitcheck-block">

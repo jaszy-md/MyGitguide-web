@@ -1,5 +1,5 @@
 <?php
-function renderBlock($header, $content, $image, $frontContent)
+function renderBlock($header, $content, $image, $frontContent, $frontImage = null)
 {
 ?>
     <div class="block" onclick="flipCard(this)">
@@ -11,6 +11,10 @@ function renderBlock($header, $content, $image, $frontContent)
                             <li class="front-text"><?php echo htmlspecialchars($item); ?></li>
                         <?php endforeach; ?>
                     </ul>
+
+                    <?php if ($frontImage): ?>
+                        <img src="<?php echo htmlspecialchars($frontImage); ?>" alt="Front Image" class="front-image">
+                    <?php endif; ?>
                 </div>
             </div>
 

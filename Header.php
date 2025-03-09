@@ -27,7 +27,6 @@
   <link href="assets/css/headerStyle.css" rel="stylesheet">
   <link href="assets/css/footerStyle.css" rel="stylesheet">
   <link href="assets/css/navigation.css" rel="stylesheet">
-  <link href="assets/css/block_sportplanStyle.css" rel="stylesheet">
   <link href="assets/css/indexStyle.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/sportplanStyle.css">
 
@@ -44,7 +43,7 @@
           <li><a href="index.php" class="nav-link scrollto"><i class="material-icons-outlined">home</i> <span>Home</span></a></li>
           <li><a href="sportplan.php" class="nav-link scrollto"><i class="material-icons-outlined">directions_run</i> <span>Sportplan</span></a></li>
           <li><a href="bookings.php" class="nav-link scrollto"><i class="material-icons-outlined">event_available</i> <span>Boeken</span></a></li>
-          <li><a href="#" class="nav-link scrollto"><i class="material-icons-outlined">call</i> <span>Contact</span></a></li>
+          <li><a href="contact.php" class="nav-link scrollto"><i class="material-icons-outlined">call</i> <span>Contact</span></a></li>
         </ul>
 
       </nav>
@@ -76,7 +75,6 @@
             </a></p>
         </div>
 
-        <!-- ✅ Popup staat nu BINNEN de wrapper -->
         <div id="popupContainer">
           <img src="assets/img/popup-black-bg.png" alt="PB" class="popup">
         </div>

@@ -139,9 +139,45 @@ document.addEventListener("DOMContentLoaded", function () {
     setActiveIcon();
 });
 
-
-
+// Cardflip
 function flipCard(cardElement) {
+    const flippedCards = document.querySelectorAll('.block.flipped');
+
+    flippedCards.forEach(card => {
+        if (card !== cardElement) {
+            card.classList.remove('flipped');
+        }
+    });
+
     cardElement.classList.toggle('flipped');
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    let modal = document.getElementById("popupModal");
+
+    if (modal) {
+        modal.style.display = "none"; 
+    }
+
+    document.getElementById("appointment-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (modal) {
+            modal.style.display = "flex";
+        }
+
+        this.reset();
+    });
+
+    document.getElementById("closePopup").addEventListener("click", function () {
+        if (modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+});

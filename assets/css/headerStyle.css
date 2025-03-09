@@ -268,7 +268,7 @@
   /* header section */
   #header_section {
     width: 100%;
-    min-height: 45vh;
+    min-height: 49.5vh;
     background: url("../img/fit-duo-banner.png") top right no-repeat;
     background-size: cover;
     background-position: center;

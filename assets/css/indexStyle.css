@@ -1,50 +1,128 @@
 .text-wrapper {
-    width: 500px;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin: auto;
-    height: 100%;
+  width: 500px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  height: 100%;
 }
 
-.title{
-    color: var(--main-color--);
+.fitcheck-block-call {
+  width: 600px;
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  min-height: 140px;
+}
+.block-content-call {
+  height: 140px;
+  background: linear-gradient(to bottom, #a3d9ff, #d5ebff);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  padding: 11px 20px;
+  position: relative;
+}
+
+.title {
+  color: var(--main-color--);
 }
 .intro_text {
-    margin-top: 0;
-    text-align: center;
-    max-width: 80%;
-    line-height: 1.5;
+  margin-top: 0;
+  text-align: center;
+  max-width: 80%;
+  line-height: 1.5;
 }
 
+.fitcheck-image-call {
+  width: 37%;
+  height: auto;
+  position: absolute;
+  bottom: 1%;
+  left: 78%;
+  transform: translateX(-50%);
+}
+.fitcheck-call-text {
+  width: 60%;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+.fitcheck-btn {
+  width: 20%;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.519);
+  height: auto;
+  padding: 3px;
+  position: absolute;
+  bottom: 5%;
+  left: 23%;
+  transform: translateX(-50%);
+}
 .intro_text p {
-margin-bottom: 0;
+  margin-bottom: 0;
 }
-
-.white_container {
-    background-color: rgb(255, 255, 255);
-    height: 240px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.fitcheck-btn {
+  text-align: center;
+  margin: 10px auto;
 }
-
-.blue_container {
-    background-color: #E5F4FF;
-    height: 400px;
-    width: 100%;
-}
-
 @media (min-width: 320px) and (max-width: 700px) {
-
-    .white_container {
-        height: 300px;
-    }
-    .blue_container {
-        height: 300px;
-    }
+  .white_container {
+    height: 300px;
+  }
+  .text-wrapper {
+    width: 320px;
+    max-width: 100%;
+  }
+  .fitcheck-block-call {
+    width: 300px;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background: white;
+    min-height: 190px;
+  }
+  .block-content-call {
+    height: 190px;
+    background: linear-gradient(to bottom, #a3d9ff, #d5ebff);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    padding: 11px 20px;
+    position: relative;
+  }
+  .fitcheck-btn {
+    width: 34%;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.519);
+    padding: 2px;
+    position: absolute;
+    bottom: 5%;
+    left: 23%;
+    transform: translateX(-50%);
+  }
+  .fitcheck-image-call {
+    width: 39%;
+    height: auto;
+    position: absolute;
+    bottom: 0%;
+    left: 78%;
+    transform: translateX(-50%);
+  }
+  .fitcheck-call-text {
+    width: 98%;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
 }

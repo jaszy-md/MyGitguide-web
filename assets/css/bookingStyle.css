@@ -30,7 +30,9 @@
   margin-bottom: 20px;
   color: #272829;
 }
-
+strong.title {
+  color: var(--main-color--);
+}
 /* ✅ Formulierstijl */
 .form-group {
   margin-bottom: 15px;
@@ -133,9 +135,10 @@ button:hover {
 
 /* ✅ Afbeelding in de popup */
 .popup-img {
-  width: 80px;
+  width: 110px;
   height: auto;
-  margin-bottom: 15px;
+  margin: 0 auto 15px auto; /* Zet de afbeelding in het midden */
+  display: block; /* Zorgt dat de margin correct werkt */
 }
 
 /* ✅ Titel en tekst */
@@ -172,10 +175,6 @@ button:hover {
   transition: background 0.3s;
 }
 
-#closePopup:hover {
-  background: #009ad7;
-}
-
 /* ✅ Animatie voor het in beeld laten verschijnen van de popup */
 @keyframes fadeIn {
   from {
@@ -192,5 +191,25 @@ button:hover {
 @media (max-width: 600px) {
   .modal-content {
     width: 90%;
+  }
+  .popup-img {
+    width: 100px;
+    height: auto;
+    margin: 0 auto 15px auto; /* Zet de afbeelding in het midden */
+    display: block; /* Zorgt dat de margin correct werkt */
+  }
+  #closePopup {
+    background: var(--main-color--);
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  button {
+    font-size: 15px;
+    padding: 10px;
   }
 }
