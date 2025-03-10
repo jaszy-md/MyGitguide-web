@@ -76,15 +76,12 @@
         </div>
 
         <div id="popupContainer">
-          <img src="assets/img/popup-black-bg.png" alt="PB" class="popup">
+          <a href="sportplan.php">
+            <img src="assets/img/popup-black-bg.png" alt="PB" class="popup">
+          </a>
         </div>
+
       </div>
     </div>
-
-
     </div>
   </section>
-
-
-  <script src="assets/js/jsFunctions.js"></script>
-  <script src="assets/js/fitcheck.js"></script>

@@ -34,8 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const questionText = document.getElementById("fitcheck-question");
     const counterText = document.getElementById("fitcheck-counter");
-
-    // Modal elementen selecteren
     const popupModal = document.getElementById("popupModal");
     const popupText = document.getElementById("popupText");
     const closePopup = document.getElementById("closePopup");
@@ -48,8 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (currentQuestionIndex < questions.length) {
             questionText.innerText = questions[currentQuestionIndex].text;
             updateCounter();
-        } else {
-            showResult();
         }
     }
 
@@ -58,6 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
             let selectedPackage = questions[currentQuestionIndex].package;
             scores[selectedPackage] = (scores[selectedPackage] || 0) + 1;
         }
+
+        if (currentQuestionIndex === questions.length - 1) {
+            showResult();
+            return;
+        }
+
         currentQuestionIndex++;
         loadQuestion();
     };
@@ -65,37 +67,38 @@ document.addEventListener("DOMContentLoaded", function () {
     function showResult() {
         let highestScore = 0;
         let bestPackage = "Geen pakket gevonden";
-
+    
         for (let [packageName, score] of Object.entries(scores)) {
             if (score > highestScore) {
                 highestScore = score;
                 bestPackage = packageName;
             }
         }
-
-        // Zet de tekst in de modal in plaats van een alert
-        popupText.innerText = `Jouw aanbevolen pakket is: ${bestPackage}`;
-
-        // Open de modal
-        popupModal.style.display = "block";
+    
+        // ✅ Hier voegen we HTML toe voor styling
+        popupText.innerHTML = `
+            <p>Jouw aanbevolen pakket is:</p>
+            <strong class="popup-package">${bestPackage}</strong>
+        `;
+    
+        popupModal.classList.add("active");
     }
+    
 
-    // Sluit de modal als je op de sluitknop klikt
     closePopup.addEventListener("click", function () {
-        popupModal.style.display = "none";
+        popupModal.classList.remove("active");
     });
 
-    // Optioneel: Sluit de modal als je buiten de modal klikt
     window.addEventListener("click", function (event) {
         if (event.target === popupModal) {
-            popupModal.style.display = "none";
+            popupModal.classList.remove("active");
         }
     });
 
     window.resetCheck = function () {
         currentQuestionIndex = 0;
         scores = {};
-        popupModal.style.display = "none"; // Sluit de modal bij reset
+        popupModal.classList.remove("active");
         loadQuestion();
     };
 

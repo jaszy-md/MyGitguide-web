@@ -122,7 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Sends to page after open
     navTextLinks.forEach(span => {
         span.addEventListener("click", function (event) {
             event.stopPropagation();

@@ -16,7 +16,7 @@
 
 .spacing {
   width: 100%;
-  min-height: 100px;
+  min-height: 50px;
   display: block;
 }
 
@@ -37,11 +37,7 @@
 
 .fitcheck-block .block-header {
   height: 40px;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.9),
-    rgba(92, 92, 92, 0.9)
-  );
+  background: linear-gradient(to right, #437ca7, #263955);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,7 +131,7 @@
 
 .fitcheck-block {
   position: relative;
-  padding-bottom: 40px; /* Zorgt ervoor dat de knop niet te dicht op andere content zit */
+  padding-bottom: 40px;
 }
 
 .reset-button {

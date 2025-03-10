@@ -35,7 +35,6 @@
   text-align: left;
 }
 
-/* Reset standaardstijlen van lijst en items */
 .nav-menu ul,
 .nav-menu li {
   margin: 0;
@@ -43,7 +42,6 @@
   list-style: none;
 }
 
-/* Extra styling voor de lijst-items */
 .nav-menu > ul > li {
   position: relative;
   white-space: nowrap;
@@ -52,7 +50,6 @@
   margin-bottom: 8px;
 }
 
-/* Cirkels altijd zichtbaar */
 .nav-menu a,
 .nav-menu a:focus {
   display: flex;
@@ -72,7 +69,6 @@
   transition: width 0.4s ease-in-out, background 0.3s ease-in-out;
 }
 
-/* Positioneer icon in cirkel */
 .nav-menu a i {
   font-size: 18px;
   color: #fff !important;
@@ -83,12 +79,10 @@
   transform: translateY(-50%);
 }
 
-/* Actieve icon kleur */
 .nav-menu a.active-link i {
   color: var(--main-color--) !important;
 }
 
-/* Smooth tekst fade-in */
 .nav-menu a span {
   font-size: 15px;
   opacity: 0;
@@ -99,7 +93,6 @@
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* Open effect - alleen breedte verandert, hoogte blijft 45px */
 .nav-menu a.open {
   width: 150px;
 }
@@ -109,13 +102,11 @@
   transform: translateX(0);
 }
 
-/* Smooth sluiten */
 .nav-menu a.closing {
   width: 45px;
   transition: width 0.4s ease-in-out;
 }
 
-/* Mobile weergave */
 @media (min-width: 320px) and (max-width: 700px) {
   .navbar .nav-link {
     font-size: 12px;
@@ -130,7 +121,6 @@
     text-align: center;
   }
 
-  /* ✅ Basisformaat van het menu-item */
   .nav-menu a {
     font-size: 12px;
     padding: 0 6px;
@@ -139,39 +129,33 @@
     transition: width 0.4s ease-in-out, background 0.3s ease-in-out;
   }
 
-  /* ✅ Open effect: alleen breedte verandert, hoogte blijft */
   .nav-menu a.open {
     width: 120px;
     height: 35px;
   }
 
-  /* ✅ Sluiten zonder te vergroten */
   .nav-menu a.closing {
     width: 35px !important;
     height: 35px !important;
     transition: width 0.4s ease-in-out;
   }
 
-  /* ✅ Icoon blijft netjes in het midden */
   .nav-menu a i {
     font-size: 14px;
     left: 10px;
     transition: color 0.3s ease-in-out;
   }
 
-  /* ✅ Tekstpositie aanpassen */
   .nav-menu a span {
     font-size: 12px;
     left: 42px;
   }
 
-  /* ✅ Tekst fade-in effect blijft netjes */
   .nav-menu a.open span {
     opacity: 1;
     transform: translateX(0);
   }
 
-  /* ✅ Zorg ervoor dat het item nooit groter wordt */
   .nav-menu a:not(.open) {
     width: 35px !important;
     height: 35px !important;

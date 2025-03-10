@@ -5,11 +5,22 @@ include_once 'Header.php';
 <head>
     <link href="assets/css/bookingStyle.css" rel="stylesheet">
     <link href="assets/css/sportplan.css" rel="stylesheet">
+    <link href="assets/css/modalStyle.css" rel="stylesheet">
 </head>
 
 <body class="booking-page">
     <br>
     <br>
+    <div class="white_container">
+        <div class="wrapper">
+            <div class="text-wrapper">
+                <p class="intro_text_contact">
+                    Welkom bij onze <b class="title">Contact</b> pagina!<br>
+
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="booking-wrapper">
         <div class="booking-container">
             <h1>Boek nu je afspraak!</h1>
@@ -35,15 +46,13 @@ include_once 'Header.php';
         </div>
     </div>
 
-    <div id="popupModal" class="modal">
-        <div class="modal-content">
+    <?php
+    $popupText = "<p>Bedankt voor het kiezen van <strong class='title'>MyFitGuide!</strong></p>
+                  <p>Een medewerker neemt zo spoedig mogelijk contact met u op.</p>";
+    $popupImage = "assets/img/fitcheck.png";
 
-            <p>Bedankt voor het kiezen van <strong class="title">MyFitGuide!</strong></p>
-            <p>Een medewerker neemt zo spoedig mogelijk contact met u op.</p>
-            <img src="assets/img/fitcheck.png" alt="Success" class="popup-img">
-            <button id="closePopup">Sluiten</button>
-        </div>
-    </div>
+    include 'components/message_modal.php';
+    ?>
 
     <br>
     <br>

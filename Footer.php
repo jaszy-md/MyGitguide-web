@@ -18,9 +18,7 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
-<script src="assets/js/swiper.js"></script>
-<script src="JS/jsFunctions.js"></script>
-<script src="assets/js/booking.js"></script>
+<script src="assets/js/jsFunctions.js"></script>
+<script src="assets/js/fitcheck.js"></script>
 
 </html>
