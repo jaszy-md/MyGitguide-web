@@ -8,7 +8,7 @@ include_once 'Header.php';
 <br>
 <br>
 
-<body>
+<body class="contact-page">
     <main class="contact-container">
         <div class="middle-color-container">
             <h2>Contact</h2>

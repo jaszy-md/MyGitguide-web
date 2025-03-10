@@ -70,6 +70,7 @@
   top: 11%;
   left: 50%;
   transform: translateX(-50%);
+  width: 500px;
 }
 
 .fitcheck-buttons {
@@ -120,6 +121,38 @@
   background-color: #a3d9ff;
   margin: 20px auto;
 }
+.fitcheck-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.fitcheck-block {
+  position: relative;
+  padding-bottom: 40px; /* Zorgt ervoor dat de knop niet te dicht op andere content zit */
+}
+
+.reset-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 45px;
+}
 
 @media (max-width: 900px) {
   .block {
@@ -134,7 +167,7 @@
 
   .fitcheck-block {
     width: 90%;
-    min-height: 220px;
+    min-height: 250px;
   }
 
   .fitcheck-text {
@@ -147,7 +180,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 85%;
-    top: 35%;
+    top: 45%;
   }
 
   .fitcheck-button {
@@ -161,8 +194,8 @@
     height: auto;
     position: absolute;
     bottom: 10px;
-    left: 48%;
-    top: 45%;
+    left: 50%;
+    top: 57%;
     transform: translateX(-50%);
   }
 }

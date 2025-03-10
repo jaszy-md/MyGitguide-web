@@ -87,3 +87,4 @@
 
 
   <script src="assets/js/jsFunctions.js"></script>
+  <script src="assets/js/fitcheck.js"></script>

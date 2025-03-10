@@ -18,6 +18,21 @@
   margin-top: 0;
 }
 
+.contact-page #header_section {
+  background: url("../img/fit-duo-banner-two.png") center center no-repeat;
+  background-size: cover;
+}
+
+.sportplan-page #header_section {
+  background: url("../img/fit-duo-banner-three.png") center center no-repeat;
+  background-size: cover;
+}
+
+.booking-page #header_section {
+  background: url("../img/fit-duo-banner-four.png") center center no-repeat;
+  background-size: cover;
+}
+
 #header {
   position: absolute;
   top: 50px;

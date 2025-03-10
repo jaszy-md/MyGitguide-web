@@ -4,9 +4,10 @@ include_once 'Header.php';
 
 <head>
     <link href="assets/css/bookingStyle.css" rel="stylesheet">
+    <link href="assets/css/sportplan.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="booking-page">
     <br>
     <br>
     <div class="booking-wrapper">
