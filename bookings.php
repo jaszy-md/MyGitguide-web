@@ -15,7 +15,7 @@ include_once 'Header.php';
         <div class="wrapper">
             <div class="text-wrapper">
                 <p class="intro_text_contact">
-                    Welkom bij onze <b class="title">Contact</b> pagina!<br>
+                    Welkom bij onze <b class="title">Bookings</b> pagina!<br>
 
                 </p>
             </div>

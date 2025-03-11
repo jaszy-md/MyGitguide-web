@@ -9,7 +9,18 @@ include_once 'Header.php';
 <br>
 
 <body class="contact-page">
+    <div class="white_container">
+        <div class="wrapper">
+            <div class="text-wrapper">
+                <p class="intro_text_contact">
+                    Welkom bij onze <b class="title">Contact</b> pagina!<br>
 
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
     <main class="contact-container">
         <div class="middle-color-container">
             <h2>Contact</h2>
@@ -37,9 +48,10 @@ include_once 'Header.php';
             </div>
         </div>
     </main>
+    <br>
+    <br>
+    <br>
 </body>
-<br>
-<br>
 <?php
 include_once 'Footer.php';
 ?>
