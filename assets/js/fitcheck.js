@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     
-        // ✅ Hier voegen we HTML toe voor styling
         popupText.innerHTML = `
             <p>Jouw aanbevolen pakket is:</p>
             <strong class="popup-package">${bestPackage}</strong>

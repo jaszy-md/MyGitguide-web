@@ -88,4 +88,12 @@
   .map-container iframe {
     height: 250px;
   }
+
+  .intro_text_contact {
+    margin-top: 0;
+    font-size: 18px;
+    text-align: center;
+    max-width: 100%;
+    line-height: 1.7;
+  }
 }

@@ -38,7 +38,7 @@
   <header id="header" class="d-flex flex-column justify-content-center">
     <div class="wrapper">
       <nav id="navbar" class="navbar nav-menu">
-        <ul class="nav-links"> <!-- 1x class voor alle links -->
+        <ul class="nav-links">
           <li><a href="index.php"><i class="material-icons-outlined">home</i> <span>Home</span></a></li>
           <li><a href="sportplan.php"><i class="material-icons-outlined">directions_run</i> <span>Sportplan</span></a></li>
           <li><a href="bookings.php"><i class="material-icons-outlined">event_available</i> <span>Afspraak</span></a></li>
