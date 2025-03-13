@@ -14,13 +14,11 @@ include_once 'Header.php';
             <div class="text-wrapper">
                 <p class="intro_text_contact">
                     Welkom bij onze <b class="title">Contact</b> pagina!<br>
-
                 </p>
             </div>
         </div>
     </div>
-    <br>
-    <br>
+
     <main class="contact-container">
         <div class="middle-color-container">
             <h2>Contact</h2>

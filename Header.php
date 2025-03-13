@@ -35,17 +35,15 @@
 </head>
 
 <body>
-
   <header id="header" class="d-flex flex-column justify-content-center">
     <div class="wrapper">
       <nav id="navbar" class="navbar nav-menu">
-        <ul>
-          <li><a href="index.php" class="nav-link scrollto"><i class="material-icons-outlined">home</i> <span>Home</span></a></li>
-          <li><a href="sportplan.php" class="nav-link scrollto"><i class="material-icons-outlined">directions_run</i> <span>Sportplan</span></a></li>
-          <li><a href="bookings.php" class="nav-link scrollto"><i class="material-icons-outlined">event_available</i> <span>Boeken</span></a></li>
-          <li><a href="contact.php" class="nav-link scrollto"><i class="material-icons-outlined">call</i> <span>Contact</span></a></li>
+        <ul class="nav-links"> <!-- 1x class voor alle links -->
+          <li><a href="index.php"><i class="material-icons-outlined">home</i> <span>Home</span></a></li>
+          <li><a href="sportplan.php"><i class="material-icons-outlined">directions_run</i> <span>Sportplan</span></a></li>
+          <li><a href="bookings.php"><i class="material-icons-outlined">event_available</i> <span>Afspraak</span></a></li>
+          <li><a href="contact.php"><i class="material-icons-outlined">call</i> <span>Contact</span></a></li>
         </ul>
-
       </nav>
     </div>
   </header>

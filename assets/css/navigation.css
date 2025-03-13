@@ -1,3 +1,4 @@
+/* Algemene styling */
 .navbar {
   display: flex;
   align-items: center;
@@ -5,22 +6,40 @@
   width: 100%;
 }
 
-.navbar .nav-link {
+/* Navigatie links */
+.nav-links {
+  display: flex;
+  flex-direction: column; /* Zet de links onder elkaar */
+  gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Stijl voor alle links binnen .nav-links */
+.nav-links a {
   color: #ffffff;
   font-size: 18px;
   font-weight: 500;
   padding: 10px 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   transition: color 0.3s ease-in-out;
 }
 
-.navbar .nav-link:hover {
+/* Hover effect */
+.nav-links a:hover {
   color: var(--hover-color--);
 }
 
-.navbar .nav-link.active {
+/* Actieve link */
+.nav-links a.active {
   color: var(--main-color--);
 }
 
+/* Logo */
 .navbar-brand {
   font-size: 18px;
   font-weight: 500;
@@ -29,14 +48,14 @@
   text-decoration: none;
 }
 
+/* Navigatiemenu */
 .nav-menu {
   padding: 0;
   display: block;
   text-align: left;
 }
 
-.nav-menu ul,
-.nav-menu li {
+.nav-menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -50,8 +69,8 @@
   margin-bottom: 8px;
 }
 
-.nav-menu a,
-.nav-menu a:focus {
+/* Navigatieknoppen */
+.nav-menu a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -69,6 +88,7 @@
   transition: width 0.4s ease-in-out, background 0.3s ease-in-out;
 }
 
+/* Icons */
 .nav-menu a i {
   font-size: 18px;
   color: #fff !important;
@@ -83,6 +103,7 @@
   color: var(--main-color--) !important;
 }
 
+/* Tekst naast icon */
 .nav-menu a span {
   font-size: 15px;
   opacity: 0;
@@ -93,6 +114,7 @@
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+/* Menu animatie */
 .nav-menu a.open {
   width: 150px;
 }
@@ -107,14 +129,11 @@
   transition: width 0.4s ease-in-out;
 }
 
-@media (min-width: 320px) and (max-width: 700px) {
-  .navbar .nav-link {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-
-  .navbar-brand {
+/* 📌 Mobile Responsive */
+@media (max-width: 700px) {
+  .nav-links a {
     font-size: 14px;
+    padding: 8px 15px;
   }
 
   .nav-menu {
